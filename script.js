@@ -1,4 +1,3 @@
-const btn = document.getElementById('btn');
 const books = [
     {
         title: 'Book',
@@ -22,9 +21,12 @@ const books = [
     },
 ]
 
-btn.addEventListener('click', function () {
-    getTheTitles(books);
-});
+window.onload = () => {
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function () {
+        getTheTitles(books);
+    });
+}
 
 /**
  * Función que devuele e imprime en consola un nuevo arreglo que contenga sólamente los títulos de los libros guardados en el parámetro books.
